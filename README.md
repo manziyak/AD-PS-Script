@@ -13,5 +13,6 @@ $users = Get-ADUser -Filter { accountExpires -eq 0 } -SearchBase $base_dn
 Write-Host "List of AD accounts set with no expiration date:"
 
 foreach ($user in $users) {
+
     Write-Host $user.SamAccountName
 }
